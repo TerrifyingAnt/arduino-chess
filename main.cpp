@@ -45,16 +45,18 @@ int main(int argc, char** argv)
 
     Println("");
 
-    switch(mode) {
-        case 1: {
-            startGameComputerComputer(depth, maxSteps);
-            break;
-        }
-        default: {
-            startGamePlayerComputer(depth, maxSteps);
-            break;
-        }
-    }
+    startGamePlayerComputer(depth, maxSteps);
+
+    // switch(mode) {
+    //     case 1: {
+    //         startGameComputerComputer(depth, maxSteps);
+    //         break;
+    //     }
+    //     default: {
+    //         startGamePlayerComputer(depth, maxSteps);
+    //         break;
+    //     }
+    // }
 
 
 
@@ -118,8 +120,8 @@ void computerMove(ChessBoard& board, int depth, int maxSteps)
 
     ChessEngine engine;
 
-    ChessMove computerMove = engine.calculateMoveIterative(board, maxSteps);
-    //ChessMove computerMove = engine.calculateMove(board, depth, whitePlays);
+    //ChessMove computerMove = engine.calculateMoveIterative(board, maxSteps);
+    ChessMove computerMove = engine.calculateMove(board, depth, whitePlays);
 
     Print("Computer moving ");
     char name[16];

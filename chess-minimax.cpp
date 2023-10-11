@@ -24,11 +24,11 @@ ChessMove ChessEngine::calculateMoveIterative(ChessBoard board, unsigned maxStep
             break;
         }
 
-        /*if (whitePlays) {
-            if (move.score > bestMove.score)
-                bestMove = move;
-        } else if (move.score < bestMove.score)
-            bestMove = move;*/
+        // if (whitePlays) {
+        //     if (move.score > newMove.score)
+        //         newMove = move;
+        // } else if (move.score < newMove.score)
+        //     newMove = move;
 
         Print("Depth: ");
         Print(depth);
